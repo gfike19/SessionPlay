@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">
+        Enter some text: <input type="text" name="sumText" id="sumText"/>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <table>
+        <th>Words entered are:</th>
+        <tr th:each="word: ${words}">
+            <td th:text="${word}"></td>
+        </tr>
+    </table>
+</body>
+</html>
