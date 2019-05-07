@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("SessionPlay")
@@ -24,8 +25,10 @@ public class MainController {
         return "redirect:";
     }
 
-    @RequestMapping(value = "error")
-    public String error() {
-        return "error";
-    }
+//    @RequestMapping(value = "", method = RequestMethod.GET)
+//    public String index(Model model, HttpSession session) {
+//        String words = (String) session.getAttribute("words");
+//        model.addAttribute(words);
+//        return "SessionPlay/index";
+//    }
 }
