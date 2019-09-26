@@ -13,8 +13,9 @@
     <br>
     <table>
         <th>Words entered are:</th>
-        <tr th:each="word: ${words}">
-            <td th:text="${word}"></td>
+        <tr th:each="each: ${hmap}">
+            <td th:text="${each.key}"></td>
+            <td th:text="${each.value}"></td>
         </tr>
     </table>
 </body>
