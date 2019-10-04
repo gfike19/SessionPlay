@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
     <form method="post">
-        Enter some text: <input type="text" name="sumText" id="sumText"/>
+<!--        Enter some text: <input type="text" name="sumText" id="sumText"/>-->
+        <label for="rNum">Generate a number</label>
+        <input type="hidden" name="rNum" id="rNum" th:value="${rNum}"/>.
         <br>
         <button type="submit">Submit</button>
     </form>
     <br>
     <table>
-        <th>Words entered are:</th>
-        <tr th:each="word: ${words}">
-            <td th:text="${word}"></td>
+        <th>List of Random Numbers</th>
+        <tr th:each="num: ${rList}">
+            <td th:text="${num}"></td>
         </tr>
     </table>
 </body>
